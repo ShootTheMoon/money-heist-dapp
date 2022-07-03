@@ -6,6 +6,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    font-size: 1.7rem;
 }
 
 .headerWrapper{
@@ -58,4 +59,16 @@
     height: 100vh;
     background-color: var(--secondary-color);
     width: 20rem;
+}
+
+.priceWrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    color: var(--text-color);
+}
+
+.tokenLogoWrapper{
+    margin-top: .5rem;
 }

@@ -33,7 +33,7 @@ function MyApp({ Component, pageProps, holders }) {
   const [chain, setChain] = useState(56);
   const [price, setPrice] = useState(0.0);
   const [bnbPrice, setBnbPrice] = useState(0.0);
-  const nativeTokenAddress = "0x223963cb59b1b0a0345365958146fd44cde2b7d1";
+  const nativeTokenAddress = "0x223963cb59b1b0a0345365958146fd44cde2b7d1".toLowerCase();
   const tokenVM = tokenContract(web3, nativeTokenAddress);
 
   /////////////////////////////////////////////////////////////////////
@@ -41,14 +41,11 @@ function MyApp({ Component, pageProps, holders }) {
   // Get token price every 10 seconds
   useEffect(() => {
     const getPrice = async () => {
-      let p = await tokenPrice(nativeTokenAddress);
+      let p = await tokenPrice(web3, nativeTokenAddress);
       setPrice(p.priceInUSD);
       setBnbPrice(p.bnbPrice);
     };
     getPrice();
-    const t = setInterval(getPrice, 10000);
-
-    return () => clearInterval(t); // clear
   }, []);
 
   // Disconnect Wallet
@@ -215,7 +212,7 @@ function MyApp({ Component, pageProps, holders }) {
       }}
     >
       <NotificationProvider>
-        <Menu showWallet={showWallet} />
+        <Menu showWallet={showWallet} price={price} />
         <Layout>
           <Component {...pageProps} />
         </Layout>
