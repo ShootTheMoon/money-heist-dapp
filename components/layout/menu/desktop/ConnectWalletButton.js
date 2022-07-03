@@ -12,6 +12,8 @@ const ConnectWalletButton = ({ setToggleWalletInfoModal }) => {
   const [buttonText, setButtonText] = useState("Connect Wallet");
 
   useEffect(() => {
+    const button = document.querySelector("#connect").firstElementChild;
+    button.addEventListener('click', () => setShowWallet(true))
     !account
       ? setButtonText("Connect Wallet")
       : setButtonText(account.slice(0, 2) + ".." + account.slice(-7));
@@ -19,13 +21,21 @@ const ConnectWalletButton = ({ setToggleWalletInfoModal }) => {
 
   return (
     <main className={styles.walletWrapper}>
-      <div className={styles.buttonWrapper}>
-        {!account ? (
+      <div id="connect" className={styles.buttonWrapper}>
+        <PlainButton
+          buttonHeight="4rem"
+          buttonWidth="15rem"
+          className={styles.connectButton}
+        >
+          {buttonText}
+        </PlainButton>
+        {/* {!account ? (
           <PlainButton
             buttonHeight="4rem"
             buttonWidth="15rem"
             className={styles.connectButton}
             function={() => setShowWallet(true)}
+            id="connect"
           >
             {buttonText}
           </PlainButton>
@@ -61,7 +71,7 @@ const ConnectWalletButton = ({ setToggleWalletInfoModal }) => {
               {buttonText}
             </div>
           </PlainButton>
-        )}
+        )} */}
       </div>
     </main>
   );
