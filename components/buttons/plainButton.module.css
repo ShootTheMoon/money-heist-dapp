@@ -1,0 +1,21 @@
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .4rem .8rem;
+    border-radius: var(--border-radius);
+    border: none;
+    background-color: transparent;
+    border: .2rem solid var(--action-color);
+    z-index: 20;    
+    font-weight: 600;
+    font-size: 1.6rem;
+    cursor: pointer;
+    color: var(--text-color);
+    transition: .3s;
+}
+
+.wrapper:hover{
+    background-color: var(--action-color);
+    box-shadow: 0rem 0rem 1rem 0rem var(--action-color);
+}

@@ -1,0 +1,36 @@
+.walletWrapper > h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 1.5rem;
+}
+
+.walletLogo{
+  position: relative;
+  transition: .3s;
+  z-index: 100;
+}
+
+.walletWrapper {
+  color: var(--text-color);
+  width: 30rem;
+  padding: 1.5rem;
+  display: flex;
+  border: .1rem solid var(--action-color);
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row-reverse;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  text-align: center;
+  transition: .3s;
+}
+
+.walletWrapper:hover{
+  background-color: var(--action-color);
+  color: var(--main-color);
+}
+
+.walletWrapper:hover .walletLogo{
+    filter: invert(80%);
+}

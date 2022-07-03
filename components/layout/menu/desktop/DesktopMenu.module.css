@@ -1,0 +1,61 @@
+.main{
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.headerWrapper{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--secondary-color);
+}
+
+/* Header */
+
+.header{
+    width: 100%;
+    height: 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.headerRight{
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2rem;
+}
+
+.headerLeft{
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.socialsWrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .6rem;
+}
+
+.socialsWrapper svg{
+    height: 2.5rem;
+    fill: var(--text-color);
+}
+
+.menuWrapper{
+    height: 100vh;
+    background-color: var(--secondary-color);
+    width: 20rem;
+}

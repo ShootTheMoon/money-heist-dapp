@@ -1,0 +1,8 @@
+.wrapper{
+    top: 10rem;
+    right: 1.5rem;
+    position: fixed;
+    z-index: 100000;
+    gap: 2rem;
+    z-index: 1000000;
+}

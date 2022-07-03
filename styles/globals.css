@@ -1,9 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 62.5%;
+  --main-color: #393939;
+  --secondary-color: #181818;
+  --action-color: #e61d2e;
+  --text-color: #fff;
+  --border-radius: .5rem;
 }
 
 a {
@@ -14,3 +20,28 @@ a {
 * {
   box-sizing: border-box;
 }
+
+h1{
+  padding: 0;
+  margin: 0;
+  font-size: 4rem;
+}
+
+h2{
+  padding: 0;
+  margin: 0;
+  font-size: 3.5rem;
+}
+
+h3{
+  padding: 0;
+  margin: 0;
+  font-size: 3rem;
+}
+
+h4{
+  padding: 0;
+  margin: 0;
+  font-size: 2.5rem;
+}
+

@@ -1,0 +1,17 @@
+.buttonWrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.walletInfo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.walletIcon{
+    margin-right: 1rem;
+    fill: var(--text-color);
+}
