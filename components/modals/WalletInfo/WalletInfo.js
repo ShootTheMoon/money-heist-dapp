@@ -20,13 +20,12 @@ const WalletInfo = ({ setToggleWalletInfoModal }) => {
   const balance = async () => {
     const balance = await getTokenBalance(account, nativeTokenAddress);
     setBnbBallance(balance.bnbBalance.toFixed(4));
-    setTokenBalance(balance.tokenBalance.toFixed(4));
+    setTokenBalance(balance.tokenBalance.toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
   };
 
   useEffect(() => {
     balance();
   }, []);
-
 
   const animations = {
     background: {
@@ -89,25 +88,41 @@ const WalletInfo = ({ setToggleWalletInfoModal }) => {
             <h2>Wallet Info</h2>
           </div>
           <div className={styles.popupBody}>
-            <div className={styles.infoWrapper}>
+            <div className={styles.walletInfoWrapper}>
               <div className={styles.infoWrapper}>
-                <div>BNB Balance:</div>
+                <div>BNB</div>
                 <div>{bnbBalance}</div>
               </div>
               <div className={styles.infoWrapper}>
-                <div>$HEIST Balance:</div>
+                <div>$HEIST</div>
                 <div>{tokenBalance}</div>
               </div>
-              <div
-                className={styles.address}
-                onClick={() => copyToClipboard(account)}
-              >
-                {account && `${account.slice(0, 3)}...${account.slice(-20)}`}
-                <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24">
-                  <path d="M9.825 17.9Q8.8 17.9 8.088 17.188Q7.375 16.475 7.375 15.45V3.875Q7.375 2.85 8.088 2.125Q8.8 1.4 9.825 1.4H18.35Q19.375 1.4 20.1 2.125Q20.825 2.85 20.825 3.875V15.45Q20.825 16.475 20.1 17.188Q19.375 17.9 18.35 17.9ZM9.825 15.75H18.35Q18.475 15.75 18.575 15.662Q18.675 15.575 18.675 15.45V3.875Q18.675 3.75 18.575 3.65Q18.475 3.55 18.35 3.55H9.825Q9.7 3.55 9.613 3.65Q9.525 3.75 9.525 3.875V15.45Q9.525 15.575 9.613 15.662Q9.7 15.75 9.825 15.75ZM5.025 22.7Q4 22.7 3.288 21.987Q2.575 21.275 2.575 20.25V6.3H4.725V20.25Q4.725 20.375 4.812 20.462Q4.9 20.55 5.025 20.55H15.925V22.7ZM9.525 3.55Q9.525 3.55 9.525 3.637Q9.525 3.725 9.525 3.875V15.45Q9.525 15.575 9.525 15.662Q9.525 15.75 9.525 15.75Q9.525 15.75 9.525 15.662Q9.525 15.575 9.525 15.45V3.875Q9.525 3.725 9.525 3.637Q9.525 3.55 9.525 3.55Z" />
-                </svg>
+              <div className={styles.infoWrapper}>
+                <div>NFTs</div>
+                <div>0</div>
+              </div>
+              <div className={styles.infoWrapper}>
+                <div>Staked</div>
+                <div>0</div>
               </div>
             </div>
+            {account && (
+              <div className={styles.addressWrapper}>
+                <div
+                  className={styles.address}
+                  onClick={() => copyToClipboard(account)}
+                >
+                  {account.slice(0, 3)}...{account.slice(-20)}
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="24"
+                    width="24"
+                  >
+                    <path d="M9.825 17.9Q8.8 17.9 8.088 17.188Q7.375 16.475 7.375 15.45V3.875Q7.375 2.85 8.088 2.125Q8.8 1.4 9.825 1.4H18.35Q19.375 1.4 20.1 2.125Q20.825 2.85 20.825 3.875V15.45Q20.825 16.475 20.1 17.188Q19.375 17.9 18.35 17.9ZM9.825 15.75H18.35Q18.475 15.75 18.575 15.662Q18.675 15.575 18.675 15.45V3.875Q18.675 3.75 18.575 3.65Q18.475 3.55 18.35 3.55H9.825Q9.7 3.55 9.613 3.65Q9.525 3.75 9.525 3.875V15.45Q9.525 15.575 9.613 15.662Q9.7 15.75 9.825 15.75ZM5.025 22.7Q4 22.7 3.288 21.987Q2.575 21.275 2.575 20.25V6.3H4.725V20.25Q4.725 20.375 4.812 20.462Q4.9 20.55 5.025 20.55H15.925V22.7ZM9.525 3.55Q9.525 3.55 9.525 3.637Q9.525 3.725 9.525 3.875V15.45Q9.525 15.575 9.525 15.662Q9.525 15.75 9.525 15.75Q9.525 15.75 9.525 15.662Q9.525 15.575 9.525 15.45V3.875Q9.525 3.725 9.525 3.637Q9.525 3.55 9.525 3.55Z" />
+                  </svg>
+                </div>
+              </div>
+            )}
           </div>
           <div className={styles.popupFooter}>
             <PlainButton
