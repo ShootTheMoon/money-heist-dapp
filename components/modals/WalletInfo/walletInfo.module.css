@@ -71,7 +71,7 @@
 .addressWrapper{
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: column;
   font-size: 1.7rem;
   font-weight: 400;
@@ -90,27 +90,26 @@
   border-radius: var(--border-radius);
   cursor: pointer;
   font-weight: 600;
+  transition: .3s;
 
 }
 .address svg {
   fill: var(--text-color);
 }
 
+.address:hover{
+  background-color: var(--action-color);
+}
+
 .bscScan{
+  font-size: 1.6rem;
+  padding-top: .5rem;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  color: var(--action-color);
+  color: var(--text-color);
   font-weight: 400;
   gap: .6rem;
-  cursor: pointer;
-}
-.bscScan:hover{
-  text-decoration: underline;
-}
-
-.bscScan svg {
-  fill: var(--action-color);
   cursor: pointer;
 }
 /* Header */
