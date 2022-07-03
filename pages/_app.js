@@ -11,7 +11,7 @@ import {
   switchToBscMainnet,
   addBscMainnet,
 } from "../components/Utils/Metamask_Functions/metmask";
-import NotificationProvider from "../components/Modals/AlertPopup/NotificationProvider";
+import NotificationProvider from "../components/modals/AlertPopup/NotificationProvider";
 import { tokenPrice } from "../components/Utils/TokenPrice/tokenprice";
 // Components
 import Layout from "../components/layout/Layout";
