@@ -30,7 +30,7 @@
 
 .popupBody{
   padding: 0 2rem;
-  background: var(--secondary-color);
+  background: var(--main-color);
   color: var(--text-color);
   display: flex;
   justify-content: center;
@@ -60,7 +60,7 @@
   font-weight: 400;
   border-radius: var(--border-radius);
   color: var(--text-color);
-  background-color: var(--main-color);
+  background-color: var(--secondary-color);
 }
 
 .infoWrapper div:nth-of-type(2){
@@ -118,7 +118,7 @@
 .popupHeader {
   padding: 1rem 2rem;
   width: 100%;
-  background: var(--secondary-color);
+  background: var(--main-color);
   border-top-left-radius: var(--border-radius);
   border-top-right-radius: var(--border-radius);
   border-bottom: 0.5px solid rgba(255, 255, 255, 0.3);
@@ -148,7 +148,7 @@
   align-items: center;
   width: 100%;
   padding: 2rem 0 2rem 0;
-  background: var(--secondary-color);
+  background: var(--main-color);
   border-bottom-left-radius: var(--border-radius);
   border-bottom-right-radius: var(--border-radius);
 }
