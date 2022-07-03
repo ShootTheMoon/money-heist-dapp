@@ -5,8 +5,8 @@ body {
   margin: 0;
   font-family: 'Quicksand', sans-serif;
   font-size: 62.5%;
-  --main-color: #2f2f2f;
-  --secondary-color: #181818;
+  --secondary-color: #2f2f2f;
+  --main-color: #181818;
   --action-color: #e61d2e;
   --text-color: #fff;
   --border-radius: .5rem;
