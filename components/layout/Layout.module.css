@@ -1,5 +1,11 @@
 .layoutWrapper{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
     min-height: 100vh;
     min-width: 100vw;
     background-color: var(--main-color);
+    padding-top: 15rem;
+    padding-left: 30rem;
 }

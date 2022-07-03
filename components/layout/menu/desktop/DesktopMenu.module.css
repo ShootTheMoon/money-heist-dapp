@@ -10,6 +10,9 @@
 }
 
 .headerWrapper{
+    top: 0;
+    left: 0;
+    position: absolute;
     width: 100vw;
     display: flex;
     justify-content: center;
@@ -53,13 +56,6 @@
     height: 2.5rem;
     fill: var(--text-color);
 }
-
-.menuWrapper{
-    height: 100vh;
-    background-color: var(--secondary-color);
-    width: 20rem;
-}
-
 .priceWrapper{
     display: flex;
     justify-content: center;
@@ -70,4 +66,16 @@
 
 .tokenLogoWrapper{
     margin-top: .5rem;
+}
+
+
+/* Side Menu */
+.menuWrapper{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background-color: var(--secondary-color);
+    width: 28rem;
 }

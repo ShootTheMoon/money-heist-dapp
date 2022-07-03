@@ -15,12 +15,12 @@ function getWindowDimensions() {
   };
 }
 
-const Menu = ({ showWallet, price }) => {
+const Menu = ({ showWallet, price, children }) => {
   const [toggleWalletInfoModal, setToggleWalletInfoModal] = useState(false);
   const [windowDimensions, setWindowDimensions] = useState(800);
 
   return (
-    <div>
+    <main>
       <DesktopMenu
         setToggleWalletInfoModal={setToggleWalletInfoModal}
         price={price}
@@ -33,7 +33,8 @@ const Menu = ({ showWallet, price }) => {
           <WalletInfo setToggleWalletInfoModal={setToggleWalletInfoModal} />
         )}
       </AnimatePresence>
-    </div>
+      {children}
+    </main>
   );
 };
 
